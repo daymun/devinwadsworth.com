@@ -240,9 +240,9 @@ task :rsync do
   ok_failed system("rsync -avze 'ssh -p #{ssh_port}' #{exclude} #{"--delete" unless rsync_delete == false} #{public_dir}/ #{ssh_user}:#{document_root}")
 end
 
-desc "deploy public directory to github pages"
+desc "deploy public directory to apache"
 multitask :push do
-  puts "## Deploying branch to Github Pages "
+  puts "## Deploying branch to Apache "
   (Dir["#{deploy_dir}/*"]).each { |f| rm_rf(f) }
   Rake::Task[:copydot].invoke(public_dir, deploy_dir)
   puts "\n## copying #{public_dir} to #{deploy_dir}"
@@ -254,8 +254,8 @@ multitask :push do
     message = "Site updated at #{Time.now.utc}"
     system "git commit -m \"#{message}\""
     puts "\n## Pushing generated #{deploy_dir} website"
-    system "git push origin #{deploy_branch} --force"
-    puts "\n## Github Pages deploy complete"
+    system "git push apache #{deploy_branch} --force"
+    puts "\n## Apache deploy complete"
   end
 end
 
