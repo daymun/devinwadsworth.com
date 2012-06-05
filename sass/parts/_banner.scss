@@ -1,11 +1,8 @@
 #banner{
 	color: $gray02;
-	padding: 30px 0;
 	line-height: 30px;
-	text-align: center;
 	position: relative;
-	display: none;
-	@include border-shadow();
+	@include border-shadow($top: #eee);
 	&:hover{
 		a{
 			color: $main;
@@ -45,5 +42,34 @@
 				}
 			}
 		}
+	}
+}
+
+section.about {
+	margin: 20px auto;
+	border: 1px dotted #258fb8;
+	min-height: 80px;
+	background: white;
+	&:hover {
+		background: #fffeee;
+	}
+
+	.avatar {
+		float: left;
+		padding-right: 20px;
+	}
+	p {
+		padding: 10px;
+		font-size: 16px;
+		line-height: 26px;
+		text-align: justify;
+
+		.hi {
+			font-size: 24px;
+			font-weight: bold;
+		}
+	}
+	.more img {
+		margin-bottom: -4px;
 	}
 }
