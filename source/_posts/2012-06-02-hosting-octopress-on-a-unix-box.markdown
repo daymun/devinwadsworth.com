@@ -3,7 +3,7 @@ layout: post
 title: "Hosting Octopress on a Unix Box"
 date: 2012-06-02 19:41
 comments: true
-categories: octopress, linux, ubuntu, apache, git
+categories: octopress linux ubuntu apache git
 ---
 
 I finished setting up Octopress on GitHub Pages today and wanted to publish it at my personal url. Initially, I planned to [CNAME my domain to GitHub](https://github.com/blog/315-cname-support-for-github-pages), but apparently that feature is only available for paid accounts.

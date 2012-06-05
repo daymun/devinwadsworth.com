@@ -3,7 +3,7 @@ layout: post
 title: "A Toggle Switch for Rapportive"
 date: 2012-06-04 14:50
 comments: true
-categories: gmail, rapportive, dotjs, greasemonkey, git
+categories: gmail rapportive dotjs greasemonkey git
 ---
 
 After watching my unread email count in Gmail climb into the thousands for far too long, I finally went back to [inbox zero](http://inboxzero.com/). I'd encourage you to do the same, unless you actually plan on reading all those messages whose subject lines you skimmed and decided not to open. (good luck with that)
