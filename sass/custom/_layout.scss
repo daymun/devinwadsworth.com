@@ -19,3 +19,40 @@
 //$sidebar-pad-medium: 15px;
 //$sidebar-pad-wide: 20px;
 //$sidebar-width-wide: 300px;
+
+// header
+#sub-nav {
+  @media screen and (max-width: 600px) {
+    display: block;
+    position: relative;
+    float: none;
+    top: 0;
+    margin-top: 20px;
+    text-align: center;
+
+    .search { display: none; }
+  }
+}
+
+// body
+article {
+  .entry-content {
+    table {
+      td { text-align: left; }
+    }
+  }
+}
+
+.left {
+  float: left;
+  padding-right: 20px;
+}
+
+.image-preview {
+  list-style: none;
+
+  li {
+    display: inline-block;
+    padding: 10px;
+  }
+}

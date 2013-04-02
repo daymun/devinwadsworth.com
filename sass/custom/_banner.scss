@@ -1,0 +1,42 @@
+header#header {
+  padding-bottom: 10px;
+  border-bottom: none;
+
+  @media screen and (max-width: 1040px) {
+    min-height: 60px;
+  }
+}
+#banner {
+  display: block;
+  padding: 0;
+  border-top: none;
+
+  section.about {
+    margin: 20px auto;
+    border: 1px dotted #258fb8;
+    min-height: 80px;
+    background: white;
+    &:hover {
+    	background: #fffeee;
+    }
+
+    .avatar {
+    	float: left;
+    	padding-right: 20px;
+    }
+    p {
+      padding: 10px;
+      font-size: 16px;
+      line-height: 26px;
+      text-align: justify;
+
+      .hi {
+        font-size: 24px;
+        font-weight: bold;
+      }
+    }
+    .more img {
+      margin-bottom: -4px;
+    }
+  }
+}
