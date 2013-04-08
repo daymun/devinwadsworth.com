@@ -1,7 +1,7 @@
 {% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}
 {% include head.html %}
 
-<body>
+<body data-page={{ page.url }}>
 	<header id="header" class="inner">{% include header.html %}</header>
 	{% unless page.banner == false %}
 		{% include banner.html %}

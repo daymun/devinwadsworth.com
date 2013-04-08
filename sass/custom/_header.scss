@@ -1,0 +1,31 @@
+header#header {
+  padding-bottom: 10px;
+  border-bottom: none;
+
+  @media screen and (max-width: 1040px) {
+    min-height: 60px;
+  }
+
+  #main-nav ul li {
+    padding: 0;
+    border-radius: 3px;
+
+    &.blog { background: #ccc; }
+    &.portfolio { background: white; }
+    &:hover { background: #ddd; }
+    a {
+      display: inline-block;
+      height: 30px;
+      margin: 0;
+      padding: 0 10px 0 20px;
+    }
+  }
+}
+
+body[data-page="/portfolio/index.html"] {
+  header#header #main-nav ul li {
+    &.blog { background: white; }
+    &.portfolio { background: #ccc; }
+    &:hover { background: #ddd; }
+  }
+}
