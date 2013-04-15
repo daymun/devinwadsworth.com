@@ -40,6 +40,10 @@ article {
     table {
       td { text-align: left; }
     }
+    .caption {
+      &:before { content: "\f03e"; }
+      &.url:before { content: "\f08e"; }
+    }
   }
 }
 
