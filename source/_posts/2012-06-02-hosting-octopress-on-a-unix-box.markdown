@@ -14,8 +14,7 @@ First, I set up my Ubuntu box as a git remote. There are a few different ways to
 
 Second, I updated my local configuration to push to this new remote. Since everything was already set up to deploy to my personal GitHub page, this was simply a matter of editing _deploy/.git/config to point to my new repository URL. I also changed the name of the new remote and [updated the deploy rake task to print different info](https://github.com/daymun/devinwadsworth.com/commit/7a67baf7f6bc915c4c14a8258f2faa1a2de89983), but this is an optional step.
 
-Finally, I cloned the repository to my Apache document root and made this quick post-receive git hook:
-{% gist 2860763 %}
+Finally, I cloned the repository to my Apache document root and made a quick post-receive git hook.
 
 Now I can run ```rake deploy``` and the site gets updated on my basement server.
 
