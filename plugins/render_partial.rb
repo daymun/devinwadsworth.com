@@ -52,7 +52,7 @@ module Jekyll
         if contents =~ /\A-{3}.+[^\A]-{3}\n(.+)/m
           contents = $1.lstrip
         end
-        contents = pre_filter(contents)
+        # contents = pre_filter(contents)
         if @raw
           contents
         else
