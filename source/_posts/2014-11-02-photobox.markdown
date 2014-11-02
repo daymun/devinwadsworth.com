@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Photobox"
+date: 2014-11-02 11:20:12 -0800
+comments: true
+categories: ruby gems scripts dropbox photos iphone camera organization
+---
+
+I was tired of having thousands of photos in my Dropbox camera uploads, so I wrote a simple [gem](https://rubygems.org/gems/photobox) to organize photos into folders.
+
+{% img /images/photobox-unclustered.png Unclustered %}
+{% img /images/arrow-right.png Right arrow %}
+{% img /images/photobox-clustered.png Clustered %}
+
+The [gem source](https://github.com/daymun/photobox) is available on GitHub.
