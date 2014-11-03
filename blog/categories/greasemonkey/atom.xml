@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: greasemonkey | Devin Wadsworth]]></title>
+  <link href="http://devinwadsworth.com/blog/categories/greasemonkey/atom.xml" rel="self"/>
+  <link href="http://devinwadsworth.com/"/>
+  <updated>2014-11-02T18:18:34-08:00</updated>
+  <id>http://devinwadsworth.com/</id>
+  <author>
+    <name><![CDATA[Devin Wadsworth]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[A Toggle Switch for Rapportive]]></title>
+    <link href="http://devinwadsworth.com/blog/2012/06/04/a-toggle-switch-for-rapportive/"/>
+    <updated>2012-06-04T14:50:00-07:00</updated>
+    <id>http://devinwadsworth.com/blog/2012/06/04/a-toggle-switch-for-rapportive</id>
+    <content type="html"><![CDATA[<p>After watching my unread email count in Gmail climb into the thousands for far too long, I finally went back to <a href="http://inboxzero.com/">inbox zero</a>. I&rsquo;d encourage you to do the same, unless you actually plan on reading all those messages whose subject lines you skimmed and decided not to open. (good luck with that)</p>
+
+<p>After archiving all those messages, I started looking for more ways to make my email more usable. I started by revisiting the Labs features within Gmail and ended up enabling a few of them. Some of my favorites that significantly improve Gmail&rsquo;s interface:</p>
+
+<ul class="image-preview">
+  <li><img src="http://devinwadsworth.com/images/gmail-unreadcountfavicon.png" alt="Unread message icon"></li>
+  <li><img src="http://devinwadsworth.com/images/gmail-sendandarchive.png" alt="Send & Archive"></li>
+  <li><img src="http://devinwadsworth.com/images/gmail-rightchat.gif" alt="Right-side chat"></li>
+</ul>
+
+
+
+
+<!-- more -->
+
+
+<p>I like having chat more accessible with the right-side chat feature, but because I use <a href="http://rapportive.com/">Rapportive</a>, the total page width was getting to be a bit much for 1280x800. Not wanting to lose the Rapportive functionality, I decided to write a little toggle switch using Chris Wanstrath&rsquo;s <a href="http://defunkt.io/dotjs/">dotjs</a>. It makes the Rapportive menu look like this:
+<img src="/images/gmail-rapportive-toggle.png" alt="Gmail Rapportive toggle" />
+Simply click the green thing to turn Rapportive on and off. You can find the script on GitHub: <a href="https://github.com/daymun/dotjs-scripts">https://github.com/daymun/dotjs-scripts</a></p>
+
+<p>One thing I learned while writing this is that Gmail&rsquo;s DOM is an absolute nightmare to work with. There are iframes everywhere and almost all of the elements have non-descriptive class names like &ldquo;Bu y3&rdquo;. It&rsquo;s so bad that Google themselves created a <a href="http://code.google.com/p/gmail-greasemonkey/wiki/GmailGreasemonkey10API">Greasemonkey API</a> to deal with this. Sadly, support for this features seems to be lacking - a 2.0 version is available but there&rsquo;s no mention of this in the documentation. I ended up doing it the old fashioned way but still, something to keep in mind for next time.</p>
+]]></content>
+  </entry>
+  
+</feed>

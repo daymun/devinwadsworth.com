@@ -1,0 +1,326 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Devin Wadsworth</title>
+	<meta name="author" content="Devin Wadsworth">
+
+	
+	<meta name="description" content="Use the Bower gem instead! I prefer the bower gem over bower-rails because it defaults to placing everything in components/, instead of lib/ and &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Devin Wadsworth" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.ico?v=1" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+
+<body data-page=/posts/2/index.html>
+	<header id="header" class="inner"><h1><a href="/">Devin Wadsworth</a></h1>
+<nav id="main-nav"><ul class="main">
+  <li class="blog"><a href="/">Blog</a></li>
+  <li class="portfolio"><a href="/portfolio">Portfolio</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+  <li class="blog"><a href="/">Blog</a></li>
+  <li class="portfolio"><a href="/portfolio">Portfolio</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:devinwadsworth.com">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/devinwadsworth" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/daymun" title="GitHub">GitHub</a>
+		
+    
+		
+		
+		<a class="linkedin" href="http://www.linkedin.com/in/devinwadsworth">LinkedIn</a>
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="http://google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:devinwadsworth.com">
+	</form>
+</nav>
+
+</header>
+	
+		<div id="banner" class="inner">
+  
+    <section class="about inner">
+  <img class="avatar" src="/images/devin-80x80.jpg" alt="Devin">
+  <p>
+    <span class="hi">Hi.</span> I&#8217;m a web professional based in the Bay Area. I currently write code at OnMyBlock (<a href="https://onmyblock.com/careers">we&#8217;re hiring</a>). This is my blog where I talk about the things that I build, the things that I find inspiring, and anything else that seems worth writing about.
+  </p>
+</section>
+
+  
+</div>
+
+	
+	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2013/04/14/stop-pasting-code-to-vendor-slash-assets/">
+		
+			Stop Pasting Code to Vendor/assets!</a>
+	</h2>
+	<div class="entry-content">
+		<p>Use the <a href="http://twitter.github.io/bower/">Bower</a> <a href="https://github.com/spagalloco/bower">gem</a> instead!</p>
+
+<p>I prefer the bower gem over <a href="https://github.com/rharriso/bower-rails/">bower-rails</a> because it <a href="https://github.com/spagalloco/bower#how-this-gem-differs-from-other-techniques">defaults to placing everything in components/</a>, instead of lib/ and vendor/. Using components/ is a nice cue to other developers that the project uses Bower.</p>
+
+<p>Besides, Rails creates vendor/assets/javascripts/ and vendor/assets/stylesheets/ &ndash; this structure doesn&rsquo;t make sense for many repositories that include CSS and Javascript. Use components/project_name/ instead.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	
+
+
+
+
+<time class='entry-date' datetime='2013-04-14T23:55:00-07:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>14</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>11:55 pm</span></time>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/assets/'>assets</a>, <a class='category' href='/blog/categories/bower/'>bower</a>, <a class='category' href='/blog/categories/css/'>css</a>, <a class='category' href='/blog/categories/gems/'>gems</a>, <a class='category' href='/blog/categories/javascript/'>javascript</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>
+
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/10/30/using-os-x-media-keys-with-web-applications/">
+		
+			Using OS X Media Keys With Web Applications</a>
+	</h2>
+	<div class="entry-content">
+		<p><img class="left" src="/images/mac-media-keys.jpg" title="Mac Media Keys" >
+Last week I set out to find a way to use my macbook media keys to control web applications. Specifically, I wanted to use the play/pause and next/prev buttons with <a href="https://github.com/tsquillario/MiniSub">MinSub</a>, the HTML5 player for <a href="http://www.subsonic.org/">Subsonic</a>.</p>
+
+<p>After a bit of googling, I found two solutions from <a href="http://smus.com/">Boris Smus</a>. The first (<a href="https://github.com/borismus/Chrome-Media-Keys">Chrome-Media-Keys</a>), works by adding JS event listeners to all Chrome tabs. There are a few problems with this:</p>
+
+<ol>
+<li><p>Pressing a media key doesn&rsquo;t actually trigger keypress, but pressing F7-F9 does. This means that you need to invert those keys with <a href="http://kevingessner.com/software/functionflip/">FunctionFlip</a> or similar, which breaks support for desktop media apps (you would need to push fn+play to control iTunes). I believe some non-mac keyboards will trigger keypress for their media keys.</p></li>
+<li><p>Possible performance issues because you are inserting JavaScript into every open Chrome tab.</p></li>
+<li><p>Lastly, this only works if Chrome is the active window. The whole point of media keys is to let you control music regardless of what software you are currently using.</p></li>
+</ol>
+
+
+
+		
+		<a href="/blog/2012/10/30/using-os-x-media-keys-with-web-applications/" class="more-link">Read on &rarr;</a>
+	</div>
+
+
+<div class="meta">
+	
+
+
+
+
+<time class='entry-date' datetime='2012-10-30T15:54:00-07:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>30</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>3:54 pm</span></time>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/github/'>github</a>, <a class='category' href='/blog/categories/javascript/'>javascript</a>, <a class='category' href='/blog/categories/mac/'>mac</a>, <a class='category' href='/blog/categories/media/'>media</a>, <a class='category' href='/blog/categories/minisub/'>minisub</a>, <a class='category' href='/blog/categories/music/'>music</a>, <a class='category' href='/blog/categories/osx/'>osx</a>, <a class='category' href='/blog/categories/python/'>python</a>, <a class='category' href='/blog/categories/subsonic/'>subsonic</a>
+
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/10/24/reducing-eye-strain-with-f-dot-lux/">
+		
+			Reducing Eye Strain With f.lux</a>
+	</h2>
+	<div class="entry-content">
+		<p><img class="left" src="/images/flux.png" title="f.lux" >
+I just discovered <a href="http://stereopsis.com/flux/">f.lux</a>. I&rsquo;ve only been using it for a day or so, but it&rsquo;s definitely staying on my menu bar.</p>
+
+<p>f.lux is a really simple solution to a big problem. The problem is that computer displays are incredibly hard on your eyes late at night. I&rsquo;m sure you&rsquo;ve experienced this if you use your computer more than a few hours a day.</p>
+
+<p>The answer is to automatically adjust the color temperature of your display based on time of day and type of lighting. Computer displays generally emulate daylight - that&rsquo;s fine during the day, but at night you want something closer to artificial light. At night, your display should have a warmer hue with less blue in it.</p>
+
+<p>f.lux does all of this for you, and it even detects your geographical location to know when sunset is. At first, the warmer light from the display looks pink or red because there is less blue light but I was used to it after a few minutes. Now it hurts my eyes to go back!</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	
+
+
+
+
+<time class='entry-date' datetime='2012-10-24T20:56:00-07:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>8:56 pm</span></time>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/color/'>color</a>, <a class='category' href='/blog/categories/display/'>display</a>, <a class='category' href='/blog/categories/eyesight/'>eyesight</a>
+
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/10/03/using-multiple-accounts-with-harvest-for-mac/">
+		
+			Using Multiple Accounts With Harvest for Mac</a>
+	</h2>
+	<div class="entry-content">
+		<p>I need to track time on two different <a href="http://www.getharvest.com/">Harvest</a> accounts. Harvest for Mac only allows for one account, so I made a bash script to switch between multiple .plist files.</p>
+
+<p>Save a .plist configuration under account_name:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>harvest new account_name</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Launch with a specific .plist:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>harvest account_name</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Check it out, there&rsquo;s more info in the readme: <a href="https://github.com/daymun/harvest-switcher">github.com/daymun/harvest-switcher</a></p>
+
+<p>Haven&rsquo;t used Harvest? Feel free to use my <a href="http://try.hrv.st/6s5g?b">referral link</a>.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	
+
+
+
+
+<time class='entry-date' datetime='2012-10-03T21:52:00-07:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>3</span><span class='date-suffix'>rd</span>, <span class='date-year'>2012</span></span> <span class='time'>9:52 pm</span></time>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/bash/'>bash</a>, <a class='category' href='/blog/categories/freelancing/'>freelancing</a>, <a class='category' href='/blog/categories/github/'>github</a>, <a class='category' href='/blog/categories/scripts/'>scripts</a>
+
+
+</div>
+	
+</div>
+</article>
+
+<nav id="pagenavi">
+    
+        
+            <a href="/" class="prev">Prev</a>
+        
+    
+    
+        <a href="/posts/3" class="next">Next</a>
+    
+    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
+</nav>
+</div>
+	<footer id="footer" class="inner"><a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a>
+
+<p>Powered by <a href="http://octopress.org/" target="_blank">Octopress</a></p>
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox({
+	  padding : 0
+	});
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'devinwadsworth';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//go.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-24125596-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+</body>
+</html>

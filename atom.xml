@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Devin Wadsworth]]></title>
+  <link href="http://devinwadsworth.com/atom.xml" rel="self"/>
+  <link href="http://devinwadsworth.com/"/>
+  <updated>2014-11-02T18:18:34-08:00</updated>
+  <id>http://devinwadsworth.com/</id>
+  <author>
+    <name><![CDATA[Devin Wadsworth]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[git plop]]></title>
+    <link href="http://devinwadsworth.com/blog/2014/11/02/git-plop/"/>
+    <updated>2014-11-02T17:32:08-08:00</updated>
+    <id>http://devinwadsworth.com/blog/2014/11/02/git-plop</id>
+    <content type="html"><![CDATA[<p>Use <code>git plop</code> to <code>stash</code> your unstaged changes, <code>pull</code>, and <code>pop</code> the stash.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[alias]
+</span><span class='line'>  plop = "!git stash && git pull && git stash pop"</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<!-- more -->
+
+
+
+
+<div><script src='https://gist.github.com/3067966.js?file=.gitconfig'></script>
+<noscript><pre><code>[user]
+    name  = NAME
+    email = EMAIL
+[color]
+    ui = auto
+[color &quot;branch&quot;]
+    current = yellow
+    local   = yellow
+    remote  = green
+[color &quot;diff&quot;]
+    meta = yellow
+    frag = magenta
+    old  = red
+    new  = green
+[color &quot;status&quot;]
+    added     = yellow
+    changed   = green
+    untracked = cyan
+[alias]
+    st       = status
+    cm       = commit
+    br       = branch
+    co       = checkout
+    df       = diff
+    lg       = log --graph --pretty=format:&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#39; --abbrev-commit --date=relative
+    ll       = log --pretty=format:&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#39; --decorate --numstat
+    mg       = merge --no-ff
+    serve    = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
+    ours     = &quot;!f() { git checkout --ours $@ &amp;&amp; git add $@; }; f&quot;
+    theirs   = &quot;!f() { git checkout --theirs $@ &amp;&amp; git add $@; }; f&quot;
+    assume   = update-index --assume-unchanged
+    unassume = update-index --no-assume-unchanged
+    assumed  = &quot;!git ls-files -v | grep ^h | cut -c 3-&quot;
+    plop     = &quot;!git stash &amp;&amp; git pull &amp;&amp; git stash pop&quot;
+[core]
+    excludesfile = ~/.gitignore
+[filter &quot;media&quot;]
+    clean  = git-media-clean %f
+    smudge = git-media-smudge %f
+</code></pre></noscript></div>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Photobox]]></title>
+    <link href="http://devinwadsworth.com/blog/2014/11/02/photobox/"/>
+    <updated>2014-11-02T11:20:12-08:00</updated>
+    <id>http://devinwadsworth.com/blog/2014/11/02/photobox</id>
+    <content type="html"><![CDATA[<p>I was tired of having thousands of photos in my Dropbox camera uploads, so I wrote a simple <a href="https://rubygems.org/gems/photobox">gem</a> to organize photos into folders.</p>
+
+<p><img src="http://devinwadsworth.com/images/photobox-unclustered.png" title="Unclustered" >
+<img src="http://devinwadsworth.com/images/arrow-right.png" title="Right arrow" >
+<img src="http://devinwadsworth.com/images/photobox-clustered.png" title="Clustered" ></p>
+
+<p>The <a href="https://github.com/daymun/photobox">gem source</a> is available on GitHub.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Cache Rules Everything Around Me]]></title>
+    <link href="http://devinwadsworth.com/blog/2014/09/07/cache-rules-everything-around-me/"/>
+    <updated>2014-09-07T14:53:55-07:00</updated>
+    <id>http://devinwadsworth.com/blog/2014/09/07/cache-rules-everything-around-me</id>
+    <content type="html"><![CDATA[<p>For years, Firefox has enforced a strict same-origin policy for web fonts. This is the behavior recommended by the latest <a href="http://www.w3.org/TR/css3-fonts/#same-origin-restriction">W3C Fonts Spec</a>. As indicated by the spec, servers that you wish to host fonts on for another domain will need to be configured to respond with the appropriate Cross-Origin Resource Sharing (CORS) headers.</p>
+
+<p>This behavior protects font publishers, but it also creates hassle for anyone using an external asset host or CDN. If the font asset response from your asset server doesn&rsquo;t include CORS headers, those fonts will not render correctly in the browser. Usually an empty square will be displayed instead of the desired character.</p>
+
+<p>There&rsquo;s an <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=604421">old issue</a> on Mozilla&rsquo;s bug tracker where the decision to implement this as default behavior is discussed at length. As noted at the end of the thread, Chrome 37 (<a href="http://googlechromereleases.blogspot.com/2014/08/stable-channel-update_26.html">released to Stable on 8/26/14</a>) now complies with the W3C spec. Because of this, it&rsquo;s now more important than ever that your asset host is configured correctly.</p>
+
+<p>If you use Cloudfront, this configuration is pretty straightforward as Amazon now offers <a href="http://aws.amazon.com/about-aws/whats-new/2014/06/26/amazon-cloudfront-device-detection-geo-targeting-host-header-cors/">full-fledged CORS support</a>. After you <a href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/header-caching.html#header-caching-web-cors">configure Cloudfront to forward the Origin header</a>, your origin server still needs to send the right headers &ndash; check out <a href="http://enable-cors.org/">enable-cors.org</a> for server specific configuration instructions. With nginx I simply had to use the <code>add_header</code> directive. Once the origin server is responding with the right headers, you&rsquo;ll need to manually bust the edge caches or generate a new asset manifest. You can see if the headers are there with <code>curl --head</code>.</p>
+
+<p>One gotcha I ran into: Chrome does a preflight request before doing a GET for the font asset. If the preflight request doesn&rsquo;t have CORS headers, the actual GET will show as canceled in the webkit network console. It was hard to tell what was going on because the network console doesn&rsquo;t show preflight requests and <code>curl --head</code> shows the right headers (GET request without preflight). So, make sure you allow both GET and OPTIONS requests with the <code>Access-Control-Allow-Methods</code> header.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Is iOS 7 Pretty on the Inside?]]></title>
+    <link href="http://devinwadsworth.com/blog/2013/06/14/is-ios-7-pretty-on-the-inside/"/>
+    <updated>2013-06-14T15:12:00-07:00</updated>
+    <id>http://devinwadsworth.com/blog/2013/06/14/is-ios-7-pretty-on-the-inside</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://devinwadsworth.com/images/iOS7-real-px.png" title="JustD Alternative Icon Set" >
+Never thought I&rsquo;d see something as ugly as the new iOS icon set on Apple&rsquo;s front page. A few of them are alright. The white background on the Safari icon looks like it&rsquo;s there by mistake. Seriously, when you accidentally save an icon with a white background instead of a transparent one, that&rsquo;s what it looks like. This is what a circular icon on a white square makes me think of &ndash; especially when the icon itself looks like a product of MS Paint.</p>
+
+<p>&ldquo;They ripped off Microsoft&rdquo; and similar accusations aside, the in-app screenshots do look pretty nice. The photos app stands out and the consistent content-first approach is refreshing. It&rsquo;s been said that this is the most important aspect of the redesign. After all, you don&rsquo;t actually spend time on the home screen &ndash; you launch your app and get out of there. Besides, with all the negative press these icons have been getting, Apple will almost certainly put some attention on them before the final release.</p>
+
+<p>But at first glance, these new icons really do seem detrimental to the Apple brand. Anyone with a bit of design sense can tell how unappealing the new icons are. Even the gradients aren&rsquo;t consistent &ndash; the mail icon sticks out like a sore thumb. They would be better off simply removing the gloss and gradient from many of their old icons. Some third party apps (Skype, LinkedIn, etc.) have already taken this approach. Betas are available for iOS 7, but most people won&rsquo;t use it until the final release this fall. In fact, I&rsquo;m sure a lot of people won&rsquo;t see anything besides the new icon set before the final is available to install on their iThings. Apple has made this new icon set the most visible (if not the most important) aspect of iOS 7 by placing it on their homepage.</p>
+
+<!-- more -->
+
+
+<p>iOS 7 is pretty on the inside, but most people won&rsquo;t see that until it&rsquo;s actually been released. Instead of getting hyped over a new iOS, people are just wondering how much of the bad icon design will get addressed before fall. And maybe that works for them &ndash; a more compelling icon set would make everyone happy and remind people that Apple is sticking with their core philosophies after all. Maybe Apple&rsquo;s new &ldquo;hype strategy&rdquo; is to under-promise and over-deliver. It seems like almost anything would be an improvement on the new icons. <a href="http://drbl.in/hVow">JustD&rsquo;s redesign on Dribbble</a> (pictured) is just one example of a redesign that looks much better.</p>
+
+<p>Apple is obviously experimenting with new design processes. They tasked the marketing team with mocking up the redesigned icons in order to get some fresh perspective (<a href="http://www.gizmodo.com.au/2013/06/why-the-ios-7-app-icons-are-so-ugly/">source</a>). Apple&rsquo;s customers are so loyal that I suppose they can afford to experiment with stuff like this. I know I&rsquo;ll use iOS 7 once it&rsquo;s released, even if it has shitty icons. And I&rsquo;ll buy a Haswell Air too. So, yes, I&rsquo;m giving Apple the benefit of the doubt for now &ndash; I&rsquo;ll feel differently if these icons actually make it into the final release.</p>
+
+<p class="copyright">Photo courtesy of <a href="http://drbl.in/hVow">JustD on Dribbble</a>.</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Stop pasting code to vendor/assets!]]></title>
+    <link href="http://devinwadsworth.com/blog/2013/04/14/stop-pasting-code-to-vendor-slash-assets/"/>
+    <updated>2013-04-14T23:55:00-07:00</updated>
+    <id>http://devinwadsworth.com/blog/2013/04/14/stop-pasting-code-to-vendor-slash-assets</id>
+    <content type="html"><![CDATA[<p>Use the <a href="http://twitter.github.io/bower/">Bower</a> <a href="https://github.com/spagalloco/bower">gem</a> instead!</p>
+
+<p>I prefer the bower gem over <a href="https://github.com/rharriso/bower-rails/">bower-rails</a> because it <a href="https://github.com/spagalloco/bower#how-this-gem-differs-from-other-techniques">defaults to placing everything in components/</a>, instead of lib/ and vendor/. Using components/ is a nice cue to other developers that the project uses Bower.</p>
+
+<p>Besides, Rails creates vendor/assets/javascripts/ and vendor/assets/stylesheets/ &ndash; this structure doesn&rsquo;t make sense for many repositories that include CSS and Javascript. Use components/project_name/ instead.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Using OS X Media Keys with Web Applications]]></title>
+    <link href="http://devinwadsworth.com/blog/2012/10/30/using-os-x-media-keys-with-web-applications/"/>
+    <updated>2012-10-30T15:54:00-07:00</updated>
+    <id>http://devinwadsworth.com/blog/2012/10/30/using-os-x-media-keys-with-web-applications</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://devinwadsworth.com/images/mac-media-keys.jpg" title="Mac Media Keys" >
+Last week I set out to find a way to use my macbook media keys to control web applications. Specifically, I wanted to use the play/pause and next/prev buttons with <a href="https://github.com/tsquillario/MiniSub">MinSub</a>, the HTML5 player for <a href="http://www.subsonic.org/">Subsonic</a>.</p>
+
+<p>After a bit of googling, I found two solutions from <a href="http://smus.com/">Boris Smus</a>. The first (<a href="https://github.com/borismus/Chrome-Media-Keys">Chrome-Media-Keys</a>), works by adding JS event listeners to all Chrome tabs. There are a few problems with this:</p>
+
+<ol>
+<li><p>Pressing a media key doesn&rsquo;t actually trigger keypress, but pressing F7-F9 does. This means that you need to invert those keys with <a href="http://kevingessner.com/software/functionflip/">FunctionFlip</a> or similar, which breaks support for desktop media apps (you would need to push fn+play to control iTunes). I believe some non-mac keyboards will trigger keypress for their media keys.</p></li>
+<li><p>Possible performance issues because you are inserting JavaScript into every open Chrome tab.</p></li>
+<li><p>Lastly, this only works if Chrome is the active window. The whole point of media keys is to let you control music regardless of what software you are currently using.</p></li>
+</ol>
+
+
+<!-- more -->
+
+
+<p>I ended up using Boris&#8217; more recent implementation, <a href="https://github.com/borismus/keysocket">keysocket</a>. This approach uses a small Python app to capture media key events and forward them through a websocket server to the web app. This solves all of the problems with the previous solution, but there are still a couple issues:</p>
+
+<ol>
+<li><p>Most desktop apps will still take over the media keys, so you need to quit any open media apps.</p></li>
+<li><p>iTunes gets launched every time play is pressed with no open music app. Of course, this one is mostly Apple&rsquo;s fault - there really should be an easy way to disable this &ldquo;feature&rdquo;. There is a <a href="http://www.thebitguru.com/projects/iTunesPatch">hack</a> that addresses this, but it apparently breaks with code signatures in 10.8.</p></li>
+</ol>
+
+
+<p>Both of these are only minor inconveniences, and I&rsquo;m really happy with this solution. I&rsquo;ve added it to <a href="https://github.com/daymun/MiniSub">my fork of MiniSub</a>. I think that these issues could be completely resolved by using the more robust <a href="https://github.com/nevyn/SPMediaKeyTap">SPMediaKeyTap</a> - maybe I will take a stab at that sometime.</p>
+
+<p><a href="https://chrome.google.com/webstore/detail/unity-music-media-keys/icckhjgjjompfgoiidainoapgjepncej">Unity Music Media Keys</a> is also a really solid proprietary solution that works with a variety of music streaming apps.</p>
+
+<p>Getting websites to behave like applications is challenging, and I&rsquo;m looking forward to seeing what kind of future allowances Google and others will make for web apps that need OS level access.</p>
+
+<p class="copyright">Photo courtesy of <a href="http://lifehacker.com/5651055/free-your-macs-media-keys-from-itunes-no-manual-hacking-required">Lifehacker</a>.</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Reducing Eye Strain with f.lux]]></title>
+    <link href="http://devinwadsworth.com/blog/2012/10/24/reducing-eye-strain-with-f-dot-lux/"/>
+    <updated>2012-10-24T20:56:00-07:00</updated>
+    <id>http://devinwadsworth.com/blog/2012/10/24/reducing-eye-strain-with-f-dot-lux</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://devinwadsworth.com/images/flux.png" title="f.lux" >
+I just discovered <a href="http://stereopsis.com/flux/">f.lux</a>. I&rsquo;ve only been using it for a day or so, but it&rsquo;s definitely staying on my menu bar.</p>
+
+<p>f.lux is a really simple solution to a big problem. The problem is that computer displays are incredibly hard on your eyes late at night. I&rsquo;m sure you&rsquo;ve experienced this if you use your computer more than a few hours a day.</p>
+
+<p>The answer is to automatically adjust the color temperature of your display based on time of day and type of lighting. Computer displays generally emulate daylight - that&rsquo;s fine during the day, but at night you want something closer to artificial light. At night, your display should have a warmer hue with less blue in it.</p>
+
+<p>f.lux does all of this for you, and it even detects your geographical location to know when sunset is. At first, the warmer light from the display looks pink or red because there is less blue light but I was used to it after a few minutes. Now it hurts my eyes to go back!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Using Multiple Accounts with Harvest for Mac]]></title>
+    <link href="http://devinwadsworth.com/blog/2012/10/03/using-multiple-accounts-with-harvest-for-mac/"/>
+    <updated>2012-10-03T21:52:00-07:00</updated>
+    <id>http://devinwadsworth.com/blog/2012/10/03/using-multiple-accounts-with-harvest-for-mac</id>
+    <content type="html"><![CDATA[<p>I need to track time on two different <a href="http://www.getharvest.com/">Harvest</a> accounts. Harvest for Mac only allows for one account, so I made a bash script to switch between multiple .plist files.</p>
+
+<p>Save a .plist configuration under account_name:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>harvest new account_name</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Launch with a specific .plist:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>harvest account_name</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Check it out, there&rsquo;s more info in the readme: <a href="https://github.com/daymun/harvest-switcher">github.com/daymun/harvest-switcher</a></p>
+
+<p>Haven&rsquo;t used Harvest? Feel free to use my <a href="http://try.hrv.st/6s5g?b">referral link</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The Space Shuttle Enterprise is Finally Home]]></title>
+    <link href="http://devinwadsworth.com/blog/2012/06/07/the-space-shuttle-enterprise-is-finally-home/"/>
+    <updated>2012-06-07T14:37:00-07:00</updated>
+    <id>http://devinwadsworth.com/blog/2012/06/07/the-space-shuttle-enterprise-is-finally-home</id>
+    <content type="html"><![CDATA[<p><img src="http://farm8.staticflickr.com/7231/7163206005_df89bd2056.jpg" alt="The Space Shuttle Enterprise" />
+I got some cool shots of the space shuttle coming into Pier 86 yesterday afternoon. It&rsquo;s now safely resting at its new home, the <a href="http://www.intrepidmuseum.org/">Intrepid Museum</a>, with <a href="http://www.collectspace.com/news/news-060412a.html">barely a scratch</a>. Check out the <a href="http://www.flickr.com/photos/devinwadsworth/sets/72157630011346391">Flickr set</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A Toggle Switch for Rapportive]]></title>
+    <link href="http://devinwadsworth.com/blog/2012/06/04/a-toggle-switch-for-rapportive/"/>
+    <updated>2012-06-04T14:50:00-07:00</updated>
+    <id>http://devinwadsworth.com/blog/2012/06/04/a-toggle-switch-for-rapportive</id>
+    <content type="html"><![CDATA[<p>After watching my unread email count in Gmail climb into the thousands for far too long, I finally went back to <a href="http://inboxzero.com/">inbox zero</a>. I&rsquo;d encourage you to do the same, unless you actually plan on reading all those messages whose subject lines you skimmed and decided not to open. (good luck with that)</p>
+
+<p>After archiving all those messages, I started looking for more ways to make my email more usable. I started by revisiting the Labs features within Gmail and ended up enabling a few of them. Some of my favorites that significantly improve Gmail&rsquo;s interface:</p>
+
+<ul class="image-preview">
+  <li><img src="http://devinwadsworth.com/images/gmail-unreadcountfavicon.png" alt="Unread message icon"></li>
+  <li><img src="http://devinwadsworth.com/images/gmail-sendandarchive.png" alt="Send & Archive"></li>
+  <li><img src="http://devinwadsworth.com/images/gmail-rightchat.gif" alt="Right-side chat"></li>
+</ul>
+
+
+
+
+<!-- more -->
+
+
+<p>I like having chat more accessible with the right-side chat feature, but because I use <a href="http://rapportive.com/">Rapportive</a>, the total page width was getting to be a bit much for 1280x800. Not wanting to lose the Rapportive functionality, I decided to write a little toggle switch using Chris Wanstrath&rsquo;s <a href="http://defunkt.io/dotjs/">dotjs</a>. It makes the Rapportive menu look like this:
+<img src="http://devinwadsworth.com/images/gmail-rapportive-toggle.png" alt="Gmail Rapportive toggle" />
+Simply click the green thing to turn Rapportive on and off. You can find the script on GitHub: <a href="https://github.com/daymun/dotjs-scripts">https://github.com/daymun/dotjs-scripts</a></p>
+
+<p>One thing I learned while writing this is that Gmail&rsquo;s DOM is an absolute nightmare to work with. There are iframes everywhere and almost all of the elements have non-descriptive class names like &ldquo;Bu y3&rdquo;. It&rsquo;s so bad that Google themselves created a <a href="http://code.google.com/p/gmail-greasemonkey/wiki/GmailGreasemonkey10API">Greasemonkey API</a> to deal with this. Sadly, support for this features seems to be lacking - a 2.0 version is available but there&rsquo;s no mention of this in the documentation. I ended up doing it the old fashioned way but still, something to keep in mind for next time.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hosting Octopress on a Unix Box]]></title>
+    <link href="http://devinwadsworth.com/blog/2012/06/02/hosting-octopress-on-a-unix-box/"/>
+    <updated>2012-06-02T19:41:00-07:00</updated>
+    <id>http://devinwadsworth.com/blog/2012/06/02/hosting-octopress-on-a-unix-box</id>
+    <content type="html"><![CDATA[<p>I finished setting up Octopress on GitHub Pages today and wanted to publish it at my personal url. Initially, I planned to <a href="https://github.com/blog/315-cname-support-for-github-pages">CNAME my domain to GitHub</a>, but apparently that feature is only available for paid accounts.</p>
+
+<p>If you already have a paid personal GitHub account for other reasons, by all means use that. I&rsquo;ve been hosting a few other sites an an <a href="http://www.flickr.com/photos/devinwadsworth/3485096700/">Ubuntu based Apache server</a> for the past few years, so I decided to use that instead. Here&rsquo;s how I did it.</p>
+
+<p>First, I set up my Ubuntu box as a git remote. There are a few different ways to do this, but I opted for the method employed by GitHub (single git user for all repositories) because I wanted to be able to host some other repositories as well. Check out this guide for some pointers on how to do this: <a href="http://www.corvidworks.com/articles/self-hosted-remote-git-repositories">http://www.corvidworks.com/articles/self-hosted-remote-git-repositories</a></p>
+
+<p>Second, I updated my local configuration to push to this new remote. Since everything was already set up to deploy to my personal GitHub page, this was simply a matter of editing _deploy/.git/config to point to my new repository URL. I also changed the name of the new remote and <a href="https://github.com/daymun/devinwadsworth.com/commit/7a67baf7f6bc915c4c14a8258f2faa1a2de89983">updated the deploy rake task to print different info</a>, but this is an optional step.</p>
+
+<p>Finally, I cloned the repository to my Apache document root and made a quick post-receive git hook.</p>
+
+<p>Now I can run <code>rake deploy</code> and the site gets updated on my basement server.</p>
+
+<p>BOOM!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[First Post with Octopress]]></title>
+    <link href="http://devinwadsworth.com/blog/2012/06/02/first-post-with-octopress/"/>
+    <updated>2012-06-02T11:51:00-07:00</updated>
+    <id>http://devinwadsworth.com/blog/2012/06/02/first-post-with-octopress</id>
+    <content type="html"><![CDATA[<p>Yesterday, I set up this blog using the excellent <a href="http://octopress.org/">Octopress</a> framework. If you&rsquo;re not familiar with it, Octopress is an extremely lightweight blogging solution that runs on <a href="http://jekyllrb.com/">Jekyll</a>. No databases, cluttered web UIs, or Wordpress PHP. And because it uses Jekyll, <a href="http://octopress.org/docs/deploying/">hosting your blog on GitHub Pages</a> is a snap.</p>
+
+<p>Write a new post in Markdown:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake new_post['First Post with Octopress']
+</span><span class='line'>Creating new post: source/_posts/2012-06-02-first-post-with-octopress.markdown</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Publish to GitHub:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate
+</span><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure>
+
+
+<p>With a framework like this, I might actually start blogging. We&rsquo;ll see.</p>
+]]></content>
+  </entry>
+  
+</feed>

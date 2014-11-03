@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: gems | Devin Wadsworth]]></title>
+  <link href="http://devinwadsworth.com/blog/categories/gems/atom.xml" rel="self"/>
+  <link href="http://devinwadsworth.com/"/>
+  <updated>2014-11-02T18:18:34-08:00</updated>
+  <id>http://devinwadsworth.com/</id>
+  <author>
+    <name><![CDATA[Devin Wadsworth]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Photobox]]></title>
+    <link href="http://devinwadsworth.com/blog/2014/11/02/photobox/"/>
+    <updated>2014-11-02T11:20:12-08:00</updated>
+    <id>http://devinwadsworth.com/blog/2014/11/02/photobox</id>
+    <content type="html"><![CDATA[<p>I was tired of having thousands of photos in my Dropbox camera uploads, so I wrote a simple <a href="https://rubygems.org/gems/photobox">gem</a> to organize photos into folders.</p>
+
+<p><img src="/images/photobox-unclustered.png" title="Unclustered" >
+<img src="/images/arrow-right.png" title="Right arrow" >
+<img src="/images/photobox-clustered.png" title="Clustered" ></p>
+
+<p>The <a href="https://github.com/daymun/photobox">gem source</a> is available on GitHub.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Stop pasting code to vendor/assets!]]></title>
+    <link href="http://devinwadsworth.com/blog/2013/04/14/stop-pasting-code-to-vendor-slash-assets/"/>
+    <updated>2013-04-14T23:55:00-07:00</updated>
+    <id>http://devinwadsworth.com/blog/2013/04/14/stop-pasting-code-to-vendor-slash-assets</id>
+    <content type="html"><![CDATA[<p>Use the <a href="http://twitter.github.io/bower/">Bower</a> <a href="https://github.com/spagalloco/bower">gem</a> instead!</p>
+
+<p>I prefer the bower gem over <a href="https://github.com/rharriso/bower-rails/">bower-rails</a> because it <a href="https://github.com/spagalloco/bower#how-this-gem-differs-from-other-techniques">defaults to placing everything in components/</a>, instead of lib/ and vendor/. Using components/ is a nice cue to other developers that the project uses Bower.</p>
+
+<p>Besides, Rails creates vendor/assets/javascripts/ and vendor/assets/stylesheets/ &ndash; this structure doesn&rsquo;t make sense for many repositories that include CSS and Javascript. Use components/project_name/ instead.</p>
+]]></content>
+  </entry>
+  
+</feed>

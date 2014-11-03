@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: museum | Devin Wadsworth]]></title>
+  <link href="http://devinwadsworth.com/blog/categories/museum/atom.xml" rel="self"/>
+  <link href="http://devinwadsworth.com/"/>
+  <updated>2014-11-02T18:18:34-08:00</updated>
+  <id>http://devinwadsworth.com/</id>
+  <author>
+    <name><![CDATA[Devin Wadsworth]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[The Space Shuttle Enterprise is Finally Home]]></title>
+    <link href="http://devinwadsworth.com/blog/2012/06/07/the-space-shuttle-enterprise-is-finally-home/"/>
+    <updated>2012-06-07T14:37:00-07:00</updated>
+    <id>http://devinwadsworth.com/blog/2012/06/07/the-space-shuttle-enterprise-is-finally-home</id>
+    <content type="html"><![CDATA[<p><img src="http://farm8.staticflickr.com/7231/7163206005_df89bd2056.jpg" alt="The Space Shuttle Enterprise" />
+I got some cool shots of the space shuttle coming into Pier 86 yesterday afternoon. It&rsquo;s now safely resting at its new home, the <a href="http://www.intrepidmuseum.org/">Intrepid Museum</a>, with <a href="http://www.collectspace.com/news/news-060412a.html">barely a scratch</a>. Check out the <a href="http://www.flickr.com/photos/devinwadsworth/sets/72157630011346391">Flickr set</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>

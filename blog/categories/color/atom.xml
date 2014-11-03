@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: color | Devin Wadsworth]]></title>
+  <link href="http://devinwadsworth.com/blog/categories/color/atom.xml" rel="self"/>
+  <link href="http://devinwadsworth.com/"/>
+  <updated>2014-11-02T18:18:34-08:00</updated>
+  <id>http://devinwadsworth.com/</id>
+  <author>
+    <name><![CDATA[Devin Wadsworth]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Reducing Eye Strain with f.lux]]></title>
+    <link href="http://devinwadsworth.com/blog/2012/10/24/reducing-eye-strain-with-f-dot-lux/"/>
+    <updated>2012-10-24T20:56:00-07:00</updated>
+    <id>http://devinwadsworth.com/blog/2012/10/24/reducing-eye-strain-with-f-dot-lux</id>
+    <content type="html"><![CDATA[<p><img class="left" src="/images/flux.png" title="f.lux" >
+I just discovered <a href="http://stereopsis.com/flux/">f.lux</a>. I&rsquo;ve only been using it for a day or so, but it&rsquo;s definitely staying on my menu bar.</p>
+
+<p>f.lux is a really simple solution to a big problem. The problem is that computer displays are incredibly hard on your eyes late at night. I&rsquo;m sure you&rsquo;ve experienced this if you use your computer more than a few hours a day.</p>
+
+<p>The answer is to automatically adjust the color temperature of your display based on time of day and type of lighting. Computer displays generally emulate daylight - that&rsquo;s fine during the day, but at night you want something closer to artificial light. At night, your display should have a warmer hue with less blue in it.</p>
+
+<p>f.lux does all of this for you, and it even detects your geographical location to know when sunset is. At first, the warmer light from the display looks pink or red because there is less blue light but I was used to it after a few minutes. Now it hurts my eyes to go back!</p>
+]]></content>
+  </entry>
+  
+</feed>
