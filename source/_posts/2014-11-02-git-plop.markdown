@@ -1,0 +1,18 @@
+---
+layout: post
+title: "git plop"
+date: 2014-11-02 17:32:08 -0800
+comments: true
+categories: git alias config stash pull pop
+---
+
+Use `git plop` to `stash` your unstaged changes, `pull`, and `pop` the stash.
+
+{% codeblock %}
+[alias]
+  plop = "!git stash && git pull && git stash pop"
+{% endcodeblock %}
+
+<!-- more -->
+
+{% gist 3067966 .gitconfig %}
