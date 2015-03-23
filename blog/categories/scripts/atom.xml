@@ -4,7 +4,7 @@
   <title><![CDATA[Category: scripts | Devin Wadsworth]]></title>
   <link href="http://devinwadsworth.com/blog/categories/scripts/atom.xml" rel="self"/>
   <link href="http://devinwadsworth.com/"/>
-  <updated>2014-11-02T18:18:34-08:00</updated>
+  <updated>2015-03-22T20:16:27-07:00</updated>
   <id>http://devinwadsworth.com/</id>
   <author>
     <name><![CDATA[Devin Wadsworth]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[First Boot]]></title>
+    <link href="http://devinwadsworth.com/blog/2015/03/22/first-boot/"/>
+    <updated>2015-03-22T18:23:50-07:00</updated>
+    <id>http://devinwadsworth.com/blog/2015/03/22/first-boot</id>
+    <content type="html"><![CDATA[<p>Switching to a new development machine is often a great opportunity to start fresh and explore new tools. That said, there&rsquo;s a core set of applications and associated preferences that I always take with me.</p>
+
+<p>I appreciate the philosophy of sensible defaults found in Rails and similar frameworks. Context switching between multiple codebases is made easier through the widely accepted &ldquo;best practices&rdquo; that are codified in the underlying framework.</p>
+
+<p>Sensible defaults guide you in the right direction; doing things the hard way can sometimes be avoided by embracing defaults. When the need to change a default setting presents itself, often the best solution is to change approach to better utilize the capabilities of the framework, thereby avoiding another re-invented wheel. Of course, sometimes you really do need to change settings. If the use case is wide enough to warrant it, a new default will hopefully be adopted in a future release of the framework.</p>
+
+<p>I see similar benefits to embracing sensible defaults in the OS. Because of Apple&rsquo;s prevalence within the developer community, many development workstations already work similarly. When I set up a new Macbook I don&rsquo;t use migration assistant. Instead, I document where I&rsquo;ve deviated from the system defaults on my old computer and apply those changes on the new machine. I migrate application level preferences with <a href="https://github.com/lra/mackup">Mackup</a>.</p>
+
+<p>I&rsquo;ve documented my approach to setting up OS X environments for development the from the last time I switched MacBooks a few months ago: <a href="https://github.com/daymun/firstboot">github.com/daymun/firstboot</a>.</p>
+
+<p>Feel free to fork firstboot and customize it to your liking. Please send a pull request if you discover a default that&rsquo;s not sensible!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Photobox]]></title>

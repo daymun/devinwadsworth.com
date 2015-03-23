@@ -7,7 +7,7 @@
 	<meta name="author" content="Devin Wadsworth">
 
 	
-	<meta name="description" content="I got some cool shots of the space shuttle coming into Pier 86 yesterday afternoon. It&rsquo;s now safely resting at its new home, the Intrepid &hellip;">
+	<meta name="description" content="I need to track time on two different Harvest accounts. Harvest for Mac only allows for one account, so I made a bash script to switch between &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -82,7 +82,7 @@
     <section class="about inner">
   <img class="avatar" src="/images/devin-80x80.jpg" alt="Devin">
   <p>
-    <span class="hi">Hi.</span> I&#8217;m a web professional based in the Bay Area. I currently write code at OnMyBlock (<a href="https://onmyblock.com/careers">we&#8217;re hiring</a>). This is my blog where I talk about the things that I build, the things that I find inspiring, and anything else that seems worth writing about.
+    <span class="hi">Hi.</span> I&#8217;m a technologist based in the Bay Area. I currently write code at OnMyBlock (<a href="https://onmyblock.com/careers">we&#8217;re hiring</a>). Welcome to my corner of the internet for side projects, rants, and technical writeups.
   </p>
 </section>
 
@@ -91,6 +91,56 @@
 
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/10/03/using-multiple-accounts-with-harvest-for-mac/">
+		
+			Using Multiple Accounts With Harvest for Mac</a>
+	</h2>
+	<div class="entry-content">
+		<p>I need to track time on two different <a href="http://www.getharvest.com/">Harvest</a> accounts. Harvest for Mac only allows for one account, so I made a bash script to switch between multiple .plist files.</p>
+
+<p>Save a .plist configuration under account_name:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>harvest new account_name</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Launch with a specific .plist:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>harvest account_name</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Check it out, there&rsquo;s more info in the readme: <a href="https://github.com/daymun/harvest-switcher">github.com/daymun/harvest-switcher</a></p>
+
+<p>Haven&rsquo;t used Harvest? Feel free to use my <a href="http://try.hrv.st/6s5g?b">referral link</a>.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	
+
+
+
+
+<time class='entry-date' datetime='2012-10-03T21:52:00-07:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>3</span><span class='date-suffix'>rd</span>, <span class='date-year'>2012</span></span> <span class='time'>9:52 pm</span></time>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/bash/'>bash</a>, <a class='category' href='/blog/categories/freelancing/'>freelancing</a>, <a class='category' href='/blog/categories/github/'>github</a>, <a class='category' href='/blog/categories/scripts/'>scripts</a>
+
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -219,64 +269,14 @@ I got some cool shots of the space shuttle coming into Pier 86 yesterday afterno
 </div>
 </article>
 
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2012/06/02/first-post-with-octopress/">
-		
-			First Post With Octopress</a>
-	</h2>
-	<div class="entry-content">
-		<p>Yesterday, I set up this blog using the excellent <a href="http://octopress.org/">Octopress</a> framework. If you&rsquo;re not familiar with it, Octopress is an extremely lightweight blogging solution that runs on <a href="http://jekyllrb.com/">Jekyll</a>. No databases, cluttered web UIs, or Wordpress PHP. And because it uses Jekyll, <a href="http://octopress.org/docs/deploying/">hosting your blog on GitHub Pages</a> is a snap.</p>
-
-<p>Write a new post in Markdown:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake new_post['First Post with Octopress']
-</span><span class='line'>Creating new post: source/_posts/2012-06-02-first-post-with-octopress.markdown</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Publish to GitHub:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate
-</span><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure>
-
-
-<p>With a framework like this, I might actually start blogging. We&rsquo;ll see.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	
-
-
-
-
-<time class='entry-date' datetime='2012-06-02T11:51:00-07:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>2</span><span class='date-suffix'>nd</span>, <span class='date-year'>2012</span></span> <span class='time'>11:51 am</span></time>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/jekyll/'>jekyll</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>
-
-
-</div>
-	
-</div>
-</article>
-
 <nav id="pagenavi">
     
         
             <a href="/posts/2" class="prev">Prev</a>
         
     
+    
+        <a href="/posts/4" class="next">Next</a>
     
     <div class="center"><a href="/blog/archives">Blog Archives</a></div>
 </nav>
