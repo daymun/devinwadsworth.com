@@ -59,4 +59,16 @@ article {
     display: inline-block;
     padding: 10px;
   }
+
+  &.fixed-height {
+    li {
+      overflow: hidden;
+      width: auto;
+
+      img {
+        height: 220px;
+        max-width: none;
+      }
+    }
+  }
 }
