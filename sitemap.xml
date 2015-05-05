@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://devinwadsworth.com/blog/2015/05/05/aux-and-bluetooth-retrofit-for-7th-gen-civic/</loc>
+    <lastmod>2015-05-05T10:22:41-07:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>http://devinwadsworth.com/blog/2015/03/22/first-boot/</loc>
     <lastmod>2015-03-22T18:23:50-07:00</lastmod>
     <priority>0.8</priority>
@@ -67,19 +72,19 @@
   </url>
   <url>
     <loc>http://devinwadsworth.com/</loc>
-    <lastmod>2015-03-26T22:49:20-07:00</lastmod>
+    <lastmod>2015-05-05T15:48:16-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://devinwadsworth.com/blog/archives/</loc>
-    <lastmod>2015-03-26T22:49:20-07:00</lastmod>
+    <lastmod>2015-05-05T15:48:16-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://devinwadsworth.com/portfolio/</loc>
-    <lastmod>2015-03-26T22:49:20-07:00</lastmod>
+    <lastmod>2015-05-05T15:48:16-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
