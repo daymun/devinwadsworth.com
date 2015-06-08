@@ -1,16 +1,191 @@
-.projects-row {
-  display: inline-block;
-  &.first { margin-top: 20px; }
+$base-border-color: gainsboro !default;
+$base-border-radius: 3px !default;
+$base-background-color: white !default;
+$base-spacing: 1.5em !default;
+$action-color: #477DCA !default;
+$base-link-color: $action-color !default;
+$dark-gray: #333 !default;
+$base-font-color: $dark-gray !default;
+$card-border-color: $base-border-color;
+$card-border: 1px solid $card-border-color;
+$card-background: lighten($card-border-color, 10%);
+$card-header-background: $card-background;
+$card-hover-background: lighten($card-background, 5%);
+$card-image-background: #DDD;
+$card-image-hover-background: lighten($card-image-background, 5%);
+$card-margin: 1em;
+$card-featured-backgrounds: #5E98A3, #AAB971, #FED484;
+$card-featured-font-colors: white, white, #825601;
 
-  .project {
-    float: left;
-    width: 30%;
-    margin-right: 5%;
-    margin-bottom: 20px;
+.cards {
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
 
-    &:last-child {
-      margin-right: 0;
+  // cards with hyperlinks
+  a.card {
+    color: #666;
+
+    &:active,
+    &:focus,
+    &:hover {
+      cursor: pointer;
+      text-decoration: none;
+      background-color: $card-hover-background;
+
+      .card-image img {
+        background: $card-image-hover-background;
+      }
+
+      .card-header {
+        background-color: $card-hover-background;
+      }
     }
-    @media screen and (max-width: 600px) { width: 100%; }
+  }
+}
+
+.card {
+  @include flex-basis(20em);
+  @include flex-grow(1);
+  @include transition (all 0.2s ease-in-out);
+  background-color: $card-background;
+  border-radius: $base-border-radius;
+  border: $card-border;
+  box-shadow: 0 2px 4px darken($base-background-color, 10%);
+  color: #666;
+  margin: 0 $card-margin $base-spacing $card-margin;
+  position: relative;
+
+  .card-top {
+    overflow: hidden;
+    height: 150px;
+    background: $card-image-background;
+
+    &.open-source {
+      position: relative;
+      background: black;
+
+      .fork-me {
+        color: black;
+        line-height: 9px;
+        font-size: 9px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 5px 10px;
+        background: $card-image-background;
+        opacity: 0.5;
+      }
+    }
+
+    h2 {
+      text-align: center;
+      padding: 45px;
+      border-bottom: none;
+
+      &:before { border-bottom: none; }
+    }
+  }
+
+  .card-image {
+    overflow: hidden;
+    height: 150px;
+
+    img {
+      @include transition (all 0.2s ease-in-out);
+      background: $card-image-background;
+      border-top-left-radius: $base-border-radius;
+      border-top-right-radius: $base-border-radius;
+      width: 100%;
+    }
+  }
+
+  .card-header {
+    @include transition (all 0.2s ease-in-out);
+    background-color: $card-header-background;
+    border-bottom: $card-border;
+    border-radius: $base-border-radius $base-border-radius 0 0;
+    font-weight: bold;
+    line-height: 1.5em;
+    padding: ($base-spacing / 3) ($base-spacing / 2);
+
+    .card-tags {
+      float: right;
+      font-weight: normal;
+      font-size: 9px;
+      position: relative;
+    }
+  }
+
+  .card-copy {
+    font-size: 0.9em;
+    line-height: 1.5em;
+    padding: ($base-spacing / 2) ($base-spacing / 2);
+
+    blockquote {
+      font-style: italic;
+      margin: 0.25em 0;
+      position: relative;
+      background: none;
+      border: none;
+      margin: 0;
+      padding: 0 0 0 10px;
+
+      &:before {
+        color: $card-border-color;
+        display: block;
+        padding-left: 10px;
+        content: "\201C";
+        font-size: 55px;
+        position: absolute;
+        left: -30px;
+        top: 10px;
+      }
+
+      cite {
+        float: right;
+        color: #999;
+        display: block;
+        margin-top: 5px;
+
+        &:before {
+          content: "\2014 \2009";
+        }
+      }
+    }
+
+    p {
+      margin: 0 0 ($base-spacing / 2);
+    }
+  }
+
+  &.featured {
+    @include flex-basis(44em);
+
+    .card-copy {
+      float: left;
+      width: 22em;
+
+      blockquote {
+        display: none;
+      }
+
+      &.pull-right {
+        float: right;
+      }
+    }
+
+    @for $i from 1 through 3 {
+      &.v#{$i} {
+        .card-top {
+          background: nth($card-featured-backgrounds, $i);
+          color: nth($card-featured-font-colors, $i);
+        }
+
+        blockquote#quote#{$i} {
+          display: block;
+        }
+      }
+    }
   }
 }

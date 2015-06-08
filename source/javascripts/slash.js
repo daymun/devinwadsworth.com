@@ -18,7 +18,7 @@
 	var appendCaption = function(){
 		$('.entry-content').each(function(i){
 			var _i = i;
-			$(this).find('img').each(function(){
+			$(this).find('img').not('.disable-fancybox').each(function(){
 				var alt = this.alt;
 
 				if (alt != ''){
@@ -30,8 +30,16 @@
 		});
 	};
 
-	externalLinks(); // Delete or comment this line to disable opening external links in new window
+	// Choose a random feature from 3 available versions on page load
+	var randomizeFeaturedCards = function(){
+		$('.card.featured').each(function(i){
+			$(this).addClass('v' + Math.floor((Math.random() * 3) + 1));
+		});
+	};
+
+	// externalLinks(); // Delete or comment this line to disable opening external links in new window
 	appendCaption(); // Delete or comment this line to disable caption
+	randomizeFeaturedCards(); // Delete or comment this line to disable randomized featured cards
 
 	var mobilenav = $('#mobile-nav');
 
