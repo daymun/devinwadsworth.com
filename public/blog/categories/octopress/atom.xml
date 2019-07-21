@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: octopress | Devin Wadsworth]]></title>
+  <link href="http://devinwadsworth.com/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://devinwadsworth.com/"/>
+  <updated>2019-07-21T06:34:06-07:00</updated>
+  <id>http://devinwadsworth.com/</id>
+  <author>
+    <name><![CDATA[Devin Wadsworth]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Hosting Octopress on a Unix Box]]></title>
+    <link href="http://devinwadsworth.com/blog/2012/06/02/hosting-octopress-on-a-unix-box/"/>
+    <updated>2012-06-02T19:41:00-07:00</updated>
+    <id>http://devinwadsworth.com/blog/2012/06/02/hosting-octopress-on-a-unix-box</id>
+    <content type="html"><![CDATA[<p>I finished setting up Octopress on GitHub Pages today and wanted to publish it at my personal url. Initially, I planned to <a href="https://github.com/blog/315-cname-support-for-github-pages">CNAME my domain to GitHub</a>, but apparently that feature is only available for paid accounts.</p>
+
+<p>If you already have a paid personal GitHub account for other reasons, by all means use that. I&rsquo;ve been hosting a few other sites an an <a href="http://www.flickr.com/photos/devinwadsworth/3485096700/">Ubuntu based Apache server</a> for the past few years, so I decided to use that instead. Here&rsquo;s how I did it.</p>
+
+<p>First, I set up my Ubuntu box as a git remote. There are a few different ways to do this, but I opted for the method employed by GitHub (single git user for all repositories) because I wanted to be able to host some other repositories as well. Check out this guide for some pointers on how to do this: <a href="http://www.corvidworks.com/articles/self-hosted-remote-git-repositories">http://www.corvidworks.com/articles/self-hosted-remote-git-repositories</a></p>
+
+<p>Second, I updated my local configuration to push to this new remote. Since everything was already set up to deploy to my personal GitHub page, this was simply a matter of editing _deploy/.git/config to point to my new repository URL. I also changed the name of the new remote and <a href="https://github.com/daymun/devinwadsworth.com/commit/7a67baf7f6bc915c4c14a8258f2faa1a2de89983">updated the deploy rake task to print different info</a>, but this is an optional step.</p>
+
+<p>Finally, I cloned the repository to my Apache document root and made a quick post-receive git hook.</p>
+
+<p>Now I can run <code>rake deploy</code> and the site gets updated on my basement server.</p>
+
+<p>BOOM!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[First Post with Octopress]]></title>
+    <link href="http://devinwadsworth.com/blog/2012/06/02/first-post-with-octopress/"/>
+    <updated>2012-06-02T11:51:00-07:00</updated>
+    <id>http://devinwadsworth.com/blog/2012/06/02/first-post-with-octopress</id>
+    <content type="html"><![CDATA[<p>Yesterday, I set up this blog using the excellent <a href="http://octopress.org/">Octopress</a> framework. If you&rsquo;re not familiar with it, Octopress is an extremely lightweight blogging solution that runs on <a href="http://jekyllrb.com/">Jekyll</a>. No databases, cluttered web UIs, or Wordpress PHP. And because it uses Jekyll, <a href="http://octopress.org/docs/deploying/">hosting your blog on GitHub Pages</a> is a snap.</p>
+
+<p>Write a new post in Markdown:
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake new_post[&lsquo;First Post with Octopress&rsquo;]
+</span><span class='line'>Creating new post: source/_posts/2012-06-02-first-post-with-octopress.markdown</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Publish to GitHub:
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate
+</span><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure></p>
+
+<p>With a framework like this, I might actually start blogging. We&rsquo;ll see.</p>
+]]></content>
+  </entry>
+  
+</feed>

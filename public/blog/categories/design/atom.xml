@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: design | Devin Wadsworth]]></title>
+  <link href="http://devinwadsworth.com/blog/categories/design/atom.xml" rel="self"/>
+  <link href="http://devinwadsworth.com/"/>
+  <updated>2019-07-21T06:34:06-07:00</updated>
+  <id>http://devinwadsworth.com/</id>
+  <author>
+    <name><![CDATA[Devin Wadsworth]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Is iOS 7 Pretty on the Inside?]]></title>
+    <link href="http://devinwadsworth.com/blog/2013/06/14/is-ios-7-pretty-on-the-inside/"/>
+    <updated>2013-06-14T15:12:00-07:00</updated>
+    <id>http://devinwadsworth.com/blog/2013/06/14/is-ios-7-pretty-on-the-inside</id>
+    <content type="html"><![CDATA[<p><img class="left" src="/images/iOS7-real-px.png" title="JustD Alternative Icon Set" >
+Never thought I&rsquo;d see something as ugly as the new iOS icon set on Apple&rsquo;s front page. A few of them are alright. The white background on the Safari icon looks like it&rsquo;s there by mistake. Seriously, when you accidentally save an icon with a white background instead of a transparent one, that&rsquo;s what it looks like. This is what a circular icon on a white square makes me think of &ndash; especially when the icon itself looks like a product of MS Paint.</p>
+
+<p>&ldquo;They ripped off Microsoft&rdquo; and similar accusations aside, the in-app screenshots do look pretty nice. The photos app stands out and the consistent content-first approach is refreshing. It&rsquo;s been said that this is the most important aspect of the redesign. After all, you don&rsquo;t actually spend time on the home screen &ndash; you launch your app and get out of there. Besides, with all the negative press these icons have been getting, Apple will almost certainly put some attention on them before the final release.</p>
+
+<p>But at first glance, these new icons really do seem detrimental to the Apple brand. Anyone with a bit of design sense can tell how unappealing the new icons are. Even the gradients aren&rsquo;t consistent &ndash; the mail icon sticks out like a sore thumb. They would be better off simply removing the gloss and gradient from many of their old icons. Some third party apps (Skype, LinkedIn, etc.) have already taken this approach. Betas are available for iOS 7, but most people won&rsquo;t use it until the final release this fall. In fact, I&rsquo;m sure a lot of people won&rsquo;t see anything besides the new icon set before the final is available to install on their iThings. Apple has made this new icon set the most visible (if not the most important) aspect of iOS 7 by placing it on their homepage.</p>
+
+<!-- more -->
+
+
+<p>iOS 7 is pretty on the inside, but most people won&rsquo;t see that until it&rsquo;s actually been released. Instead of getting hyped over a new iOS, people are just wondering how much of the bad icon design will get addressed before fall. And maybe that works for them &ndash; a more compelling icon set would make everyone happy and remind people that Apple is sticking with their core philosophies after all. Maybe Apple&rsquo;s new &ldquo;hype strategy&rdquo; is to under-promise and over-deliver. It seems like almost anything would be an improvement on the new icons. <a href="http://drbl.in/hVow">JustD&rsquo;s redesign on Dribbble</a> (pictured) is just one example of a redesign that looks much better.</p>
+
+<p>Apple is obviously experimenting with new design processes. They tasked the marketing team with mocking up the redesigned icons in order to get some fresh perspective (<a href="http://www.gizmodo.com.au/2013/06/why-the-ios-7-app-icons-are-so-ugly/">source</a>). Apple&rsquo;s customers are so loyal that I suppose they can afford to experiment with stuff like this. I know I&rsquo;ll use iOS 7 once it&rsquo;s released, even if it has shitty icons. And I&rsquo;ll buy a Haswell Air too. So, yes, I&rsquo;m giving Apple the benefit of the doubt for now &ndash; I&rsquo;ll feel differently if these icons actually make it into the final release.</p>
+
+<p class="copyright">Photo courtesy of <a href="http://drbl.in/hVow">JustD on Dribbble</a>.</p>
+
+]]></content>
+  </entry>
+  
+</feed>

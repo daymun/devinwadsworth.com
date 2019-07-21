@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: python | Devin Wadsworth]]></title>
+  <link href="http://devinwadsworth.com/blog/categories/python/atom.xml" rel="self"/>
+  <link href="http://devinwadsworth.com/"/>
+  <updated>2019-07-21T06:34:06-07:00</updated>
+  <id>http://devinwadsworth.com/</id>
+  <author>
+    <name><![CDATA[Devin Wadsworth]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Using OS X Media Keys with Web Applications]]></title>
+    <link href="http://devinwadsworth.com/blog/2012/10/30/using-os-x-media-keys-with-web-applications/"/>
+    <updated>2012-10-30T15:54:00-07:00</updated>
+    <id>http://devinwadsworth.com/blog/2012/10/30/using-os-x-media-keys-with-web-applications</id>
+    <content type="html"><![CDATA[<p><img class="left" src="/images/mac-media-keys.jpg" title="Mac Media Keys" >
+Last week I set out to find a way to use my macbook media keys to control web applications. Specifically, I wanted to use the play/pause and next/prev buttons with <a href="https://github.com/tsquillario/MiniSub">MinSub</a>, the HTML5 player for <a href="http://www.subsonic.org/">Subsonic</a>.</p>
+
+<p>After a bit of googling, I found two solutions from <a href="http://smus.com/">Boris Smus</a>. The first (<a href="https://github.com/borismus/Chrome-Media-Keys">Chrome-Media-Keys</a>), works by adding JS event listeners to all Chrome tabs. There are a few problems with this:</p>
+
+<ol>
+<li><p>Pressing a media key doesn&rsquo;t actually trigger keypress, but pressing F7-F9 does. This means that you need to invert those keys with <a href="http://kevingessner.com/software/functionflip/">FunctionFlip</a> or similar, which breaks support for desktop media apps (you would need to push fn+play to control iTunes). I believe some non-mac keyboards will trigger keypress for their media keys.</p></li>
+<li><p>Possible performance issues because you are inserting JavaScript into every open Chrome tab.</p></li>
+<li><p>Lastly, this only works if Chrome is the active window. The whole point of media keys is to let you control music regardless of what software you are currently using.</p></li>
+</ol>
+
+
+<!-- more -->
+
+
+<p>I ended up using Boris&#8217; more recent implementation, <a href="https://github.com/borismus/keysocket">keysocket</a>. This approach uses a small Python app to capture media key events and forward them through a websocket server to the web app. This solves all of the problems with the previous solution, but there are still a couple issues:</p>
+
+<ol>
+<li><p>Most desktop apps will still take over the media keys, so you need to quit any open media apps.</p></li>
+<li><p>iTunes gets launched every time play is pressed with no open music app. Of course, this one is mostly Apple&rsquo;s fault - there really should be an easy way to disable this &ldquo;feature&rdquo;. There is a <a href="http://www.thebitguru.com/projects/iTunesPatch">hack</a> that addresses this, but it apparently breaks with code signatures in 10.8.</p></li>
+</ol>
+
+
+<p>Both of these are only minor inconveniences, and I&rsquo;m really happy with this solution. I&rsquo;ve added it to <a href="https://github.com/daymun/MiniSub">my fork of MiniSub</a>. I think that these issues could be completely resolved by using the more robust <a href="https://github.com/nevyn/SPMediaKeyTap">SPMediaKeyTap</a> - maybe I will take a stab at that sometime.</p>
+
+<p><a href="https://chrome.google.com/webstore/detail/unity-music-media-keys/icckhjgjjompfgoiidainoapgjepncej">Unity Music Media Keys</a> is also a really solid proprietary solution that works with a variety of music streaming apps.</p>
+
+<p>Getting websites to behave like applications is challenging, and I&rsquo;m looking forward to seeing what kind of future allowances Google and others will make for web apps that need OS level access.</p>
+
+<p class="copyright">Photo courtesy of <a href="http://lifehacker.com/5651055/free-your-macs-media-keys-from-itunes-no-manual-hacking-required">Lifehacker</a>.</p>
+
+]]></content>
+  </entry>
+  
+</feed>

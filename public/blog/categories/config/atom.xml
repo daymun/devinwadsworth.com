@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: config | Devin Wadsworth]]></title>
+  <link href="http://devinwadsworth.com/blog/categories/config/atom.xml" rel="self"/>
+  <link href="http://devinwadsworth.com/"/>
+  <updated>2019-07-21T06:34:06-07:00</updated>
+  <id>http://devinwadsworth.com/</id>
+  <author>
+    <name><![CDATA[Devin Wadsworth]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[git plop]]></title>
+    <link href="http://devinwadsworth.com/blog/2014/11/02/git-plop/"/>
+    <updated>2014-11-02T17:32:08-08:00</updated>
+    <id>http://devinwadsworth.com/blog/2014/11/02/git-plop</id>
+    <content type="html"><![CDATA[<p>Use <code>git plop</code> to <code>stash</code> your unstaged changes, <code>pull</code>, and <code>pop</code> the stash.</p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[alias]
+</span><span class='line'>  plop = &ldquo;!git stash &amp;&amp; git pull &amp;&amp; git stash pop&rdquo;</span></code></pre></td></tr></table></div></figure></p>
+
+<!-- more -->
+
+
+<p><div><script src='https://gist.github.com/3067966.js?file=.gitconfig'></script>
+<noscript><pre><code>[user]
+	name  = NAME
+	email = EMAIL
+[color]
+	ui = auto
+[color &quot;branch&quot;]
+	current = yellow
+	local   = yellow
+	remote  = green
+[color &quot;diff&quot;]
+	meta = yellow
+	frag = magenta
+	old  = red
+	new  = green
+[color &quot;status&quot;]
+	added     = yellow
+	changed   = green
+	untracked = cyan
+[alias]
+	st       = status
+	cm       = commit
+	br       = branch
+	co       = checkout
+	df       = diff
+	lg       = log --graph --pretty=format:&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#39; --abbrev-commit --date=relative
+	ll       = log --pretty=format:&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#39; --decorate --numstat
+	mg       = merge --no-ff
+	serve    = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
+	ours     = &quot;!f() { git checkout --ours $@ &amp;&amp; git add $@; }; f&quot;
+	theirs   = &quot;!f() { git checkout --theirs $@ &amp;&amp; git add $@; }; f&quot;
+	assume   = update-index --assume-unchanged
+	unassume = update-index --no-assume-unchanged
+	assumed  = &quot;!git ls-files -v | grep ^h | cut -c 3-&quot;
+	plop     = &quot;!git stash &amp;&amp; git pull &amp;&amp; git stash pop&quot;
+[core]
+	excludesfile = ~/.gitignore
+[filter &quot;media&quot;]
+	clean  = git-media-clean %f
+	smudge = git-media-smudge %f
+</code></pre></noscript></div>
+</p>
+]]></content>
+  </entry>
+  
+</feed>

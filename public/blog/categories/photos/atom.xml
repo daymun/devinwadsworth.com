@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: photos | Devin Wadsworth]]></title>
+  <link href="http://devinwadsworth.com/blog/categories/photos/atom.xml" rel="self"/>
+  <link href="http://devinwadsworth.com/"/>
+  <updated>2019-07-21T06:34:06-07:00</updated>
+  <id>http://devinwadsworth.com/</id>
+  <author>
+    <name><![CDATA[Devin Wadsworth]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Photobox]]></title>
+    <link href="http://devinwadsworth.com/blog/2014/11/02/photobox/"/>
+    <updated>2014-11-02T11:20:12-08:00</updated>
+    <id>http://devinwadsworth.com/blog/2014/11/02/photobox</id>
+    <content type="html"><![CDATA[<p>I was tired of having thousands of photos in my Dropbox camera uploads, so I wrote a simple <a href="https://rubygems.org/gems/photobox">gem</a> to organize photos into folders.</p>
+
+<p><img src="/images/photobox-unclustered.png" title="Unclustered" >
+<img src="/images/arrow-right.png" title="Right arrow" >
+<img src="/images/photobox-clustered.png" title="Clustered" ></p>
+
+<p>The <a href="https://github.com/daymun/photobox">gem source</a> is available on GitHub.</p>
+]]></content>
+  </entry>
+  
+</feed>

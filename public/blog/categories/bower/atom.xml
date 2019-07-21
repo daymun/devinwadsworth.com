@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: bower | Devin Wadsworth]]></title>
+  <link href="http://devinwadsworth.com/blog/categories/bower/atom.xml" rel="self"/>
+  <link href="http://devinwadsworth.com/"/>
+  <updated>2019-07-21T06:34:06-07:00</updated>
+  <id>http://devinwadsworth.com/</id>
+  <author>
+    <name><![CDATA[Devin Wadsworth]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Stop pasting code to vendor/assets!]]></title>
+    <link href="http://devinwadsworth.com/blog/2013/04/14/stop-pasting-code-to-vendor-slash-assets/"/>
+    <updated>2013-04-14T23:55:00-07:00</updated>
+    <id>http://devinwadsworth.com/blog/2013/04/14/stop-pasting-code-to-vendor-slash-assets</id>
+    <content type="html"><![CDATA[<p>Use the <a href="http://twitter.github.io/bower/">Bower</a> <a href="https://github.com/spagalloco/bower">gem</a> instead!</p>
+
+<p>I prefer the bower gem over <a href="https://github.com/rharriso/bower-rails/">bower-rails</a> because it <a href="https://github.com/spagalloco/bower#how-this-gem-differs-from-other-techniques">defaults to placing everything in components/</a>, instead of lib/ and vendor/. Using components/ is a nice cue to other developers that the project uses Bower.</p>
+
+<p>Besides, Rails creates vendor/assets/javascripts/ and vendor/assets/stylesheets/ &ndash; this structure doesn&rsquo;t make sense for many repositories that include CSS and Javascript. Use components/project_name/ instead.</p>
+]]></content>
+  </entry>
+  
+</feed>

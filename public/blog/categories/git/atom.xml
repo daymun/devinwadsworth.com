@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: git | Devin Wadsworth]]></title>
+  <link href="http://devinwadsworth.com/blog/categories/git/atom.xml" rel="self"/>
+  <link href="http://devinwadsworth.com/"/>
+  <updated>2019-07-21T06:34:06-07:00</updated>
+  <id>http://devinwadsworth.com/</id>
+  <author>
+    <name><![CDATA[Devin Wadsworth]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[git plop]]></title>
+    <link href="http://devinwadsworth.com/blog/2014/11/02/git-plop/"/>
+    <updated>2014-11-02T17:32:08-08:00</updated>
+    <id>http://devinwadsworth.com/blog/2014/11/02/git-plop</id>
+    <content type="html"><![CDATA[<p>Use <code>git plop</code> to <code>stash</code> your unstaged changes, <code>pull</code>, and <code>pop</code> the stash.</p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[alias]
+</span><span class='line'>  plop = &ldquo;!git stash &amp;&amp; git pull &amp;&amp; git stash pop&rdquo;</span></code></pre></td></tr></table></div></figure></p>
+
+<!-- more -->
+
+
+<p><div><script src='https://gist.github.com/3067966.js?file=.gitconfig'></script>
+<noscript><pre><code>[user]
+	name  = NAME
+	email = EMAIL
+[color]
+	ui = auto
+[color &quot;branch&quot;]
+	current = yellow
+	local   = yellow
+	remote  = green
+[color &quot;diff&quot;]
+	meta = yellow
+	frag = magenta
+	old  = red
+	new  = green
+[color &quot;status&quot;]
+	added     = yellow
+	changed   = green
+	untracked = cyan
+[alias]
+	st       = status
+	cm       = commit
+	br       = branch
+	co       = checkout
+	df       = diff
+	lg       = log --graph --pretty=format:&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#39; --abbrev-commit --date=relative
+	ll       = log --pretty=format:&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#39; --decorate --numstat
+	mg       = merge --no-ff
+	serve    = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
+	ours     = &quot;!f() { git checkout --ours $@ &amp;&amp; git add $@; }; f&quot;
+	theirs   = &quot;!f() { git checkout --theirs $@ &amp;&amp; git add $@; }; f&quot;
+	assume   = update-index --assume-unchanged
+	unassume = update-index --no-assume-unchanged
+	assumed  = &quot;!git ls-files -v | grep ^h | cut -c 3-&quot;
+	plop     = &quot;!git stash &amp;&amp; git pull &amp;&amp; git stash pop&quot;
+[core]
+	excludesfile = ~/.gitignore
+[filter &quot;media&quot;]
+	clean  = git-media-clean %f
+	smudge = git-media-smudge %f
+</code></pre></noscript></div>
+</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A Toggle Switch for Rapportive]]></title>
+    <link href="http://devinwadsworth.com/blog/2012/06/04/a-toggle-switch-for-rapportive/"/>
+    <updated>2012-06-04T14:50:00-07:00</updated>
+    <id>http://devinwadsworth.com/blog/2012/06/04/a-toggle-switch-for-rapportive</id>
+    <content type="html"><![CDATA[<p>After watching my unread email count in Gmail climb into the thousands for far too long, I finally went back to <a href="http://inboxzero.com/">inbox zero</a>. I&rsquo;d encourage you to do the same, unless you actually plan on reading all those messages whose subject lines you skimmed and decided not to open. (good luck with that)</p>
+
+<p>After archiving all those messages, I started looking for more ways to make my email more usable. I started by revisiting the Labs features within Gmail and ended up enabling a few of them. Some of my favorites that significantly improve Gmail&rsquo;s interface:</p>
+
+<ul class="image-preview">
+  <li><img src="http://devinwadsworth.com/images/gmail-unreadcountfavicon.png" alt="Unread message icon"></li>
+  <li><img src="http://devinwadsworth.com/images/gmail-sendandarchive.png" alt="Send & Archive"></li>
+  <li><img src="http://devinwadsworth.com/images/gmail-rightchat.gif" alt="Right-side chat"></li>
+</ul>
+
+
+
+
+<!-- more -->
+
+
+<p>I like having chat more accessible with the right-side chat feature, but because I use <a href="http://rapportive.com/">Rapportive</a>, the total page width was getting to be a bit much for 1280x800. Not wanting to lose the Rapportive functionality, I decided to write a little toggle switch using Chris Wanstrath&rsquo;s <a href="http://defunkt.io/dotjs/">dotjs</a>. It makes the Rapportive menu look like this:
+<img src="/images/gmail-rapportive-toggle.png" alt="Gmail Rapportive toggle" />
+Simply click the green thing to turn Rapportive on and off. You can find the script on GitHub: <a href="https://github.com/daymun/dotjs-scripts">https://github.com/daymun/dotjs-scripts</a></p>
+
+<p>One thing I learned while writing this is that Gmail&rsquo;s DOM is an absolute nightmare to work with. There are iframes everywhere and almost all of the elements have non-descriptive class names like &ldquo;Bu y3&rdquo;. It&rsquo;s so bad that Google themselves created a <a href="http://code.google.com/p/gmail-greasemonkey/wiki/GmailGreasemonkey10API">Greasemonkey API</a> to deal with this. Sadly, support for this features seems to be lacking - a 2.0 version is available but there&rsquo;s no mention of this in the documentation. I ended up doing it the old fashioned way but still, something to keep in mind for next time.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hosting Octopress on a Unix Box]]></title>
+    <link href="http://devinwadsworth.com/blog/2012/06/02/hosting-octopress-on-a-unix-box/"/>
+    <updated>2012-06-02T19:41:00-07:00</updated>
+    <id>http://devinwadsworth.com/blog/2012/06/02/hosting-octopress-on-a-unix-box</id>
+    <content type="html"><![CDATA[<p>I finished setting up Octopress on GitHub Pages today and wanted to publish it at my personal url. Initially, I planned to <a href="https://github.com/blog/315-cname-support-for-github-pages">CNAME my domain to GitHub</a>, but apparently that feature is only available for paid accounts.</p>
+
+<p>If you already have a paid personal GitHub account for other reasons, by all means use that. I&rsquo;ve been hosting a few other sites an an <a href="http://www.flickr.com/photos/devinwadsworth/3485096700/">Ubuntu based Apache server</a> for the past few years, so I decided to use that instead. Here&rsquo;s how I did it.</p>
+
+<p>First, I set up my Ubuntu box as a git remote. There are a few different ways to do this, but I opted for the method employed by GitHub (single git user for all repositories) because I wanted to be able to host some other repositories as well. Check out this guide for some pointers on how to do this: <a href="http://www.corvidworks.com/articles/self-hosted-remote-git-repositories">http://www.corvidworks.com/articles/self-hosted-remote-git-repositories</a></p>
+
+<p>Second, I updated my local configuration to push to this new remote. Since everything was already set up to deploy to my personal GitHub page, this was simply a matter of editing _deploy/.git/config to point to my new repository URL. I also changed the name of the new remote and <a href="https://github.com/daymun/devinwadsworth.com/commit/7a67baf7f6bc915c4c14a8258f2faa1a2de89983">updated the deploy rake task to print different info</a>, but this is an optional step.</p>
+
+<p>Finally, I cloned the repository to my Apache document root and made a quick post-receive git hook.</p>
+
+<p>Now I can run <code>rake deploy</code> and the site gets updated on my basement server.</p>
+
+<p>BOOM!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[First Post with Octopress]]></title>
+    <link href="http://devinwadsworth.com/blog/2012/06/02/first-post-with-octopress/"/>
+    <updated>2012-06-02T11:51:00-07:00</updated>
+    <id>http://devinwadsworth.com/blog/2012/06/02/first-post-with-octopress</id>
+    <content type="html"><![CDATA[<p>Yesterday, I set up this blog using the excellent <a href="http://octopress.org/">Octopress</a> framework. If you&rsquo;re not familiar with it, Octopress is an extremely lightweight blogging solution that runs on <a href="http://jekyllrb.com/">Jekyll</a>. No databases, cluttered web UIs, or Wordpress PHP. And because it uses Jekyll, <a href="http://octopress.org/docs/deploying/">hosting your blog on GitHub Pages</a> is a snap.</p>
+
+<p>Write a new post in Markdown:
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake new_post[&lsquo;First Post with Octopress&rsquo;]
+</span><span class='line'>Creating new post: source/_posts/2012-06-02-first-post-with-octopress.markdown</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Publish to GitHub:
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate
+</span><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure></p>
+
+<p>With a framework like this, I might actually start blogging. We&rsquo;ll see.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: jekyll | Devin Wadsworth]]></title>
+  <link href="http://devinwadsworth.com/blog/categories/jekyll/atom.xml" rel="self"/>
+  <link href="http://devinwadsworth.com/"/>
+  <updated>2019-07-21T06:34:06-07:00</updated>
+  <id>http://devinwadsworth.com/</id>
+  <author>
+    <name><![CDATA[Devin Wadsworth]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[First Post with Octopress]]></title>
+    <link href="http://devinwadsworth.com/blog/2012/06/02/first-post-with-octopress/"/>
+    <updated>2012-06-02T11:51:00-07:00</updated>
+    <id>http://devinwadsworth.com/blog/2012/06/02/first-post-with-octopress</id>
+    <content type="html"><![CDATA[<p>Yesterday, I set up this blog using the excellent <a href="http://octopress.org/">Octopress</a> framework. If you&rsquo;re not familiar with it, Octopress is an extremely lightweight blogging solution that runs on <a href="http://jekyllrb.com/">Jekyll</a>. No databases, cluttered web UIs, or Wordpress PHP. And because it uses Jekyll, <a href="http://octopress.org/docs/deploying/">hosting your blog on GitHub Pages</a> is a snap.</p>
+
+<p>Write a new post in Markdown:
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake new_post[&lsquo;First Post with Octopress&rsquo;]
+</span><span class='line'>Creating new post: source/_posts/2012-06-02-first-post-with-octopress.markdown</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Publish to GitHub:
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate
+</span><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure></p>
+
+<p>With a framework like this, I might actually start blogging. We&rsquo;ll see.</p>
+]]></content>
+  </entry>
+  
+</feed>

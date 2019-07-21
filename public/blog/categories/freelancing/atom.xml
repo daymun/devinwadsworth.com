@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: freelancing | Devin Wadsworth]]></title>
+  <link href="http://devinwadsworth.com/blog/categories/freelancing/atom.xml" rel="self"/>
+  <link href="http://devinwadsworth.com/"/>
+  <updated>2019-07-21T06:34:06-07:00</updated>
+  <id>http://devinwadsworth.com/</id>
+  <author>
+    <name><![CDATA[Devin Wadsworth]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Using Multiple Accounts with Harvest for Mac]]></title>
+    <link href="http://devinwadsworth.com/blog/2012/10/03/using-multiple-accounts-with-harvest-for-mac/"/>
+    <updated>2012-10-03T21:52:00-07:00</updated>
+    <id>http://devinwadsworth.com/blog/2012/10/03/using-multiple-accounts-with-harvest-for-mac</id>
+    <content type="html"><![CDATA[<p>I need to track time on two different <a href="http://www.getharvest.com/">Harvest</a> accounts. Harvest for Mac only allows for one account, so I made a bash script to switch between multiple .plist files.</p>
+
+<p>Save a .plist configuration under account_name:
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>harvest new account_name</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Launch with a specific .plist:
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>harvest account_name</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Check it out, there&rsquo;s more info in the readme: <a href="https://github.com/daymun/harvest-switcher">github.com/daymun/harvest-switcher</a></p>
+
+<p>Haven&rsquo;t used Harvest? Feel free to use my <a href="http://try.hrv.st/6s5g?b">referral link</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>
